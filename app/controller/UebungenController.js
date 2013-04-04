@@ -50,13 +50,6 @@ Ext.define('Crossfit.controller.UebungenController', {
 		}
 	},
 	
-<<<<<<< .mine
-	fieldGetsFocus: function(comp, e, eOpts) {
-		if (Ext.os.is('Android')) {
-	        var ost = comp.element.dom.offsetTop;
-	        comp.getParent().getScrollable().getScroller().scrollTo(0, ost);
-		}
-=======
 	searchUebungenKeyUp: function(searchfield, e, eOpts) {
 		this.searchUebungen(searchfield.getValue());
 	},
@@ -81,11 +74,11 @@ Ext.define('Crossfit.controller.UebungenController', {
 		});
 	},
 	
-	textareafieldGetsFocus: function(comp, e, eOpts) {
-		// console.log(e.target.clientHeight);
-		// console.log(comp.getParent().getScrollable().getScroller());
-		// comp.getParent().getParent().getScrollable().getScroller().scrollTo(0, e.target.clientHeight);
->>>>>>> .r66
+	fieldGetsFocus: function(comp, e, eOpts) {
+		if (Ext.os.is('Android')) {
+	        var ost = comp.element.dom.offsetTop;
+	        comp.getParent().getScrollable().getScroller().scrollTo(0, ost);
+		}
 	},
 	
 	fieldLosesFocus: function(comp, e, eOpts) {

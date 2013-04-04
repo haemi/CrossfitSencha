@@ -1,5 +1,5 @@
 Ext.define('Crossfit.view.ViewPort', {
-    extend : 'Crossfit.view.OptimizedTab',
+    extend : 'Ext.tab.Panel',
 	xtype: 'tabPanel',
 	
     requires : [
@@ -36,16 +36,11 @@ Ext.define('Crossfit.view.ViewPort', {
     		title: '&Uuml;bungen',
     		iconCls: 'uebungen',
     		xtype: 'uebungenNav'
-		},
-		{
-    		title: 'Paleo',
-    		iconCls: 'uebungen',
-    		xtype: 'paleoNav'
-		},
-		{
-    		title: 'Kontakt',
-    		iconCls: 'uebungen',
-    		xtype: 'contactView'
+		// },
+		// {
+		//     		title: 'Kontakt',
+		//     		iconCls: 'uebungen',
+		//     		xtype: 'contactView'
 		}
 		]
 	}

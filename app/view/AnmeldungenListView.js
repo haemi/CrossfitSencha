@@ -15,15 +15,10 @@ Ext.define('Crossfit.view.AnmeldungenListView', {
 });
 
 function createItemTpl() {
-	console.log('test');
 	var tpl = new Ext.XTemplate(
 		'<tpl if="ichbinangemeldet">',
-<<<<<<< .mine
 			'<div style="padding:10px;background-color:rgba(169, 180, 14, 1.0);border-radius:10px;" class="angemeldetRow"><strong>{timeWithoutSeconds} (angemeldet)</strong>',
 			//'<div style="padding:10px;"><strong>{timeWithoutSeconds} (angemeldet)</strong>',
-=======
-			'<div style="padding:10px;background-color:#A9B40E;border-radius:10px;"><strong>{timeWithoutSeconds} (angemeldet)</strong>',
->>>>>>> .r66
 		'<tpl else>',
 			'<div style="padding:10px"><strong>{timeWithoutSeconds}</strong>',
 		'</tpl>',
