@@ -1,0 +1,49 @@
+$red: 0.389 * 255;
+$green: 0.563 * 255;
+$blue: 0.149 * 255;
+$alpha: 1;
+
+$green: rgba($red, $green, $blue, $alpha);
+
+$base-color: $green;
+$list-header-bg-color: darken( $green, 20%);
+
+.angemeldetRow {
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0%,#fccdce), color-stop(10%, #fcc2c4), color-stop(50%,#fdaaac), color-stop(100%, #ff8891));
+}
+
+@import '/Applications/XAMPP/xamppfiles/htdocs/touch-2.1.1/resources/themes/stylesheets/sencha-touch/default/all';
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+@include sencha-panel;
+@include sencha-buttons;
+//@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+//@include sencha-toolbar-forms;
+//@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+//@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+
+// Your custom code goes here...
+
+
+@mixin custom-iconmask($name) {
+  .x-tab .x-button-icon.#{$name},
+  .x-button .x-button-icon.x-icon-mask.#{$name} {
+    -webkit-mask-image: inline-image('icons/' + $name + '.png');
+  }
+}
+
+@include custom-iconmask('anmeldungen');
+@include custom-iconmask('myWODs');
+@include custom-iconmask('WODs');
+@include custom-iconmask('uebungen');
+@include custom-iconmask('floppy');
+@include custom-iconmask('trash');

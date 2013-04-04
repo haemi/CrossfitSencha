@@ -1,0 +1,1 @@
+2013-03-26 20:50:31 - INFO --> benutzerId: 114 - datum: 2013-03-27 - uhrzeit: 09:00:00 - kursId: 78 - single: 0

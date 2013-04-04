@@ -1,0 +1,18 @@
+2013-03-23 17:07:24 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23
+2013-03-23 17:07:31 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23
+2013-03-23 17:08:23 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23 - id: 5
+2013-03-23 17:08:35 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23 - id: 5
+2013-03-23 17:11:22 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23 - id: 5
+2013-03-23 17:26:45 - INFO --> 5
+2013-03-23 17:27:37 - INFO --> 6
+2013-03-23 17:27:41 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23
+2013-03-23 17:27:46 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh: 3 - min:  - sek:  - cm:  - datum: 2013-03-23
+2013-03-23 17:27:53 - INFO --> 7
+2013-03-23 17:27:59 - INFO --> 8
+2013-03-23 17:38:24 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh: 22 - min:  - sek:  - cm:  - datum: 2013-03-23
+2013-03-23 17:38:48 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh: 22 - min:  - sek:  - cm:  - datum: 2013-03-23 - id: 9
+2013-03-23 17:57:12 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23
+2013-03-23 17:57:26 - INFO --> 10
+2013-03-23 17:57:57 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh: 22 - min:  - sek:  - cm:  - datum: 2013-03-23 - id: 9
+2013-03-23 17:58:12 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-23
+2013-03-23 18:08:42 - INFO --> 4

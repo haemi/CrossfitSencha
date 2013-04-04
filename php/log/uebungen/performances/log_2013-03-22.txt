@@ -1,0 +1,5 @@
+2013-03-22 10:02:40 - INFO --> benutzerId: 114 - uebungsId: 2
+2013-03-22 10:02:44 - INFO --> benutzerId: 114 - uebungsId: 2
+2013-03-22 10:03:15 - INFO --> benutzerId: 114 - uebungsId: 2
+2013-03-22 10:03:20 - INFO --> benutzerId: 114 - uebungsId: 2
+2013-03-22 10:03:25 - INFO --> benutzerId: 114 - uebungsId: 2

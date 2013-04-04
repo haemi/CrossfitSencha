@@ -1,0 +1,2 @@
+2013-04-03 5:42:34 - INFO --> benutzerId: 114 - datum: 2013-04-05 - uhrzeit: 18:00:00 - kursId: 282 - single: 0
+2013-04-03 6:24:31 - INFO --> benutzerId: 114 - datum: 2013-04-05 - uhrzeit: 19:00:00 - kursId: 91 - single: 0

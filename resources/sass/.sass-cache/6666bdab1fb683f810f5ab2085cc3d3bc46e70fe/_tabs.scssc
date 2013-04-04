@@ -1,0 +1,569 @@
+3.2.6 (Media Mark)
+69a371280247703b6826a506d3f305faebdca55f
+o:Sass::Tree::RootNode
+:@template"Î// Tab icons used with permission from Drew Wilson
+// http://pictos.drewwilson.com/
+// Pictos icons are (c) 2010 Drew Wilson
+
+@import '../global';
+
+/**
+ * @class Ext.tab.Bar
+ */
+
+/**
+ * @var {boolean} $include-tabbar-uis Optionally disable separate tabbar UIs (light and dark).
+ */
+$include-tabbar-uis: $include-default-uis !default;
+
+/**
+ * @var {boolean} $include-top-tabs
+ * Optionally exclude top tab styles by setting to false.
+ */
+$include-top-tabs: true !default;
+
+/**
+ * @var {boolean} $include-bottom-tabs
+ * Optionally exclude bottom tab styles by setting to false.
+ */
+$include-bottom-tabs: true !default;
+
+/**
+ * @var {color} $tabs-light
+ * Base color for "light" UI tabs.
+ */
+$tabs-light: desaturate($base-color, 10%) !default;
+
+/**
+ * @var {color} $tabs-light-active
+ * Active color for "light" UI tabs.
+ */
+$tabs-light-active: lighten(saturate($active-color, 20%), 20%) !default;
+
+/**
+ * @var {color} $tabs-dark
+ * Base color for "dark" UI tabs.
+ */
+$tabs-dark: darken($base-color, 20%) !default;
+
+/**
+ * @var {color} $tabs-dark-active
+ * Active color for "dark" UI tabs.
+ */
+$tabs-dark-active-color: saturate(lighten($active-color, 30%), 70%) !default;
+
+/**
+ * @var {string} $tabs-bar-gradient
+ * Background gradient style for tab bars.
+ */
+$tabs-bar-gradient: $base-gradient !default;
+
+/**
+ * @class Ext.tab.Tab
+ */
+
+/**
+ * @var {string} $tabs-bottom-radius
+ * Border-radius for bottom tabs.
+ */
+$tabs-bottom-radius: .25em !default;
+
+/**
+ * @var {string} $tabs-bottom-icon-size
+ * Icon size for bottom tabs
+ */
+$tabs-bottom-icon-size: 1.65em !default;
+
+/**
+ * @var {string} $tabs-bottom-active-gradient
+ * Background gradient style for active bottom tabs.
+ */
+$tabs-bottom-active-gradient: $base-gradient !default;
+
+/**
+ * @var {boolean} $include-tab-highlights
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+$include-tab-highlights: $include-highlights !default;
+
+// Private
+
+$tabs-top-height: $global-row-height - .8em;
+
+$tabs-top-icon-size: $tabs-top-height - .6em;
+
+/**
+ * Includes default tab styles.
+ *
+ * @member Ext.tab.Bar
+ */
+@mixin sencha-tabs {
+  @if $include-top-tabs {
+    @include sencha-top-tabs;
+  }
+  @if $include-bottom-tabs {
+    @include sencha-bottom-tabs;
+  }
+
+  @if $include-tabbar-uis {
+    @include sencha-tabbar-ui('light', $tabs-light, $tabs-bar-gradient, $tabs-light-active);
+    @include sencha-tabbar-ui('dark', $tabs-dark, $tabs-bar-gradient, $tabs-dark-active-color);
+    @include sencha-tabbar-ui('neutral', $neutral-color, $tabs-bar-gradient, darken($neutral-color, 40));
+  }
+
+  // Rules for all tabs
+  .x-tab.x-item-disabled span.x-button-label, .x-tab.x-item-disabled .x-button-icon {
+    @include opacity(.5);
+  }
+  .x-tab.x-draggable {
+    @include opacity(.7);
+  }
+
+  .x-tab {
+    z-index: 1;
+    -webkit-user-select: none;
+    overflow: visible !important;
+
+    .x-button-label {
+      overflow: visible !important;
+    }
+  }
+}
+
+
+@mixin sencha-top-tabs {
+  .x-tabbar.x-docked-top {
+    border-bottom-width: .1em;
+    border-bottom-style: solid;
+    height: $global-row-height;
+    padding: 0 .8em;
+
+    .x-tab {
+      position: relative;
+      padding: (($tabs-top-height - 1em) / 2) .8em;
+      height: $tabs-top-height;
+      min-width : 3.3em;
+      @if $include-border-radius { @include border-radius($tabs-top-height / 2); }
+
+      .x-button-label {
+        font-size              : .8em;
+        line-height            : 1.2em;
+        text-rendering         : optimizeLegibility;
+        -webkit-font-smoothing : antialiased;
+      }
+
+      .x-badge {
+        font-size : .6em !important;
+        top       : -0.5em;
+      }
+
+      &.x-tab-icon {
+        padding : (($tabs-top-height - 1em) / 2) - .1em .8em;
+
+        .x-button-icon {
+          -webkit-mask-size : $tabs-top-icon-size;
+          width             : $tabs-top-icon-size;
+          height            : $tabs-top-icon-size;
+          display           : inline-block;
+          margin            : 0 auto;
+          position          : relative;
+        }
+
+        .x-button-label {
+          margin      : 0;
+          margin-left : .3em;
+          padding     : .1em 0 .2em 0;
+          display     : inline-block;
+          position    : relative;
+          top         : -.4em;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin sencha-bottom-tabs {
+  .x-tabbar.x-docked-bottom {
+    border-top-width: .1em;
+    border-top-style: solid;
+    height: 3em;
+    padding: 0;
+
+    .x-tab {
+      @if $include-border-radius { @include border-radius($tabs-bottom-radius); }
+      min-width: 3.3em;
+      position: relative;
+      padding-top: .2em;
+      @include box-orient(vertical);
+
+      .x-button-icon {
+        -webkit-mask-size: $tabs-bottom-icon-size;
+        width: $tabs-bottom-icon-size;
+        height: $tabs-bottom-icon-size;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .x-button-label {
+        margin: 0;
+        padding: .1em 0 .2em 0;
+        font-size: 9px;
+        line-height: 12px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
+  }
+
+  @if $include-default-icons {
+    @include pictos-iconmask('bookmarks');
+    @include pictos-iconmask('download');
+    @include pictos-iconmask('favorites');
+    @include pictos-iconmask('info');
+    @include pictos-iconmask('more');
+    @include pictos-iconmask('time');
+    @include pictos-iconmask('user');
+    @include pictos-iconmask('team');
+  }
+}
+
+/**
+ * Creates a theme UI for tabbar/tab components.
+ *
+ *     // SCSS
+ *     @include sencha-button-ui('pink', #333, 'matte', #AE537A);
+ *
+ *     // JS
+ *     var tabs = new Ext.tab.Panel({
+ *        tabBar: {
+ *          ui: 'pink',
+ *          dock: 'bottom',
+ *          layout: { pack: 'center' }
+ *        },
+ *        ...
+ *     });
+ *
+ * @param {string} $ui-label The name of the UI being created.
+ *   Can not included spaces or special punctuation (used in class names)
+ * @param {color} $bar-color Base color for the tab bar.
+ * @param {string} $bar-gradient Background gradient style for the tab bar.
+ * @param {color} $tab-active-color Background-color for active tab icons.
+ *
+ * @member Ext.tab.Bar
+ */
+@mixin sencha-tabbar-ui($ui-label, $bar-color, $bar-gradient, $tab-active-color) {
+  .x-tabbar-#{$ui-label} {
+    @include background-gradient($bar-color, $bar-gradient);
+    border-top-color: darken($bar-color, 5%);
+    border-bottom-color: darken($bar-color, 15%);
+
+    .x-tab {
+      @include color-by-background($bar-color, 40%);
+      border-bottom: 1px solid transparent;
+    }
+
+    .x-tab-active {
+      @include color-by-background($bar-color, 90%);
+      border-bottom-color: lighten($bar-color, 3%);
+    }
+
+    .x-tab-pressed {
+      @include color-by-background($bar-color, 100%);
+    }
+  }
+
+  @if $include-bottom-tabs {
+    .x-tabbar-#{$ui-label}.x-docked-bottom {
+      .x-tab {
+        @include bevel-by-background($bar-color);
+        .x-button-icon {
+          @include mask-by-background($bar-color, 20%, $tabs-bar-gradient);
+        }
+      }
+
+      .x-tab-active {
+        @include background-gradient(darken($bar-color, 5%), recessed);
+        @include bevel-by-background(lighten($bar-color, 10%));
+
+        @if ($include-tab-highlights) {
+          @include box-shadow(darken($bar-color, 10%) 0 0 .25em inset);
+        }
+
+        .x-button-icon {
+          @include background-gradient($tab-active-color, $tabs-bottom-active-gradient);
+        }
+      }
+    }
+  }
+
+  @if $include-top-tabs {
+    .x-tabbar-#{$ui-label}.x-docked-top {
+      .x-tab-active {
+        @include background-gradient(darken($bar-color, 5%), 'recessed');
+        @include color-by-background(darken($bar-color, 5%));
+      }
+      .x-tab {
+        .x-button-icon {
+          @include mask-by-background($bar-color, 20%, $tabs-bar-gradient);
+        }
+      }
+    }
+  }
+}
+:@options{ :@has_childrenT:@children[*o:Sass::Tree::CommentNode
+;@:@value["/* Tab icons used with permission from Drew Wilson
+ * http://pictos.drewwilson.com/
+ * Pictos icons are (c) 2010 Drew Wilson */:
+@type:silent;	[ :
+@lineio:Sass::Tree::ImportNode;0;@:@imported_file0;	[ :@imported_filename"../global;i
+o;
+
+;@;[""/**
+ * @class Ext.tab.Bar
+ */;:normal;	[ ;io;
+
+;@;["k/**
+ * @var {boolean} $include-tabbar-uis Optionally disable separate tabbar UIs (light and dark).
+ */;;;	[ ;io:Sass::Tree::VariableNode:@guarded"!default;@:
+@name"include-tabbar-uis:
+@expro:Sass::Script::Variable	;@;"include-default-uis:@underscored_name"include_default_uis;i;	[ ;io;
+
+;@;["j/**
+ * @var {boolean} $include-top-tabs
+ * Optionally exclude top tab styles by setting to false.
+ */;;;	[ ;io;;"!default;@;"include-top-tabs;o:Sass::Script::Bool;@;T;i;	[ ;io;
+
+;@;["p/**
+ * @var {boolean} $include-bottom-tabs
+ * Optionally exclude bottom tab styles by setting to false.
+ */;;;	[ ;io;;"!default;@;"include-bottom-tabs;o;;@;T;i;	[ ;io;
+
+;@;["K/**
+ * @var {color} $tabs-light
+ * Base color for "light" UI tabs.
+ */;;;	[ ;i!o;;"!default;@;"tabs-light;o:Sass::Script::Funcall:@keywords{ ;@;"desaturate:@splat0:
+@args[o;	;@;"base-color;"base_color;i%o:Sass::Script::Number:@denominator_units[ ;@:@numerator_units["%:@original"10%;i;i%;i%;	[ ;i%o;
+
+;@;["T/**
+ * @var {color} $tabs-light-active
+ * Active color for "light" UI tabs.
+ */;;;	[ ;i'o;;"!default;@;"tabs-light-active;o;;{ ;@;"lighten;0;[o;;{ ;@;"saturate;0;[o;	;@;"active-color;"active_color;i+o;;[ ;@; ["%;!"20%;i;i+;i+o;;[ ;@; ["%;!"20%;i;i+;i+;	[ ;i+o;
+
+;@;["I/**
+ * @var {color} $tabs-dark
+ * Base color for "dark" UI tabs.
+ */;;;	[ ;i-o;;"!default;@;"tabs-dark;o;;{ ;@;"darken;0;[o;	;@;"base-color;"base_color;i1o;;[ ;@; ["%;!"20%;i;i1;i1;	[ ;i1o;
+
+;@;["R/**
+ * @var {color} $tabs-dark-active
+ * Active color for "dark" UI tabs.
+ */;;;	[ ;i3o;;"!default;@;"tabs-dark-active-color;o;;{ ;@;"saturate;0;[o;;{ ;@;"lighten;0;[o;	;@;"active-color;"active_color;i7o;;[ ;@; ["%;!"30%;i#;i7;i7o;;[ ;@; ["%;!"70%;iK;i7;i7;	[ ;i7o;
+
+;@;["[/**
+ * @var {string} $tabs-bar-gradient
+ * Background gradient style for tab bars.
+ */;;;	[ ;i9o;;"!default;@;"tabs-bar-gradient;o;	;@;"base-gradient;"base_gradient;i=;	[ ;i=o;
+
+;@;[""/**
+ * @class Ext.tab.Tab
+ */;;;	[ ;i?o;
+
+;@;["S/**
+ * @var {string} $tabs-bottom-radius
+ * Border-radius for bottom tabs.
+ */;;;	[ ;iCo;;"!default;@;"tabs-bottom-radius;o;;[ ;@; ["em;!"0.25em;f	0.25;iG;	[ ;iGo;
+
+;@;["Q/**
+ * @var {string} $tabs-bottom-icon-size
+ * Icon size for bottom tabs
+ */;;;	[ ;iIo;;"!default;@;"tabs-bottom-icon-size;o;;[ ;@; ["em;!"1.65em;f1.6499999999999999 ff;iM;	[ ;iMo;
+
+;@;["o/**
+ * @var {string} $tabs-bottom-active-gradient
+ * Background gradient style for active bottom tabs.
+ */;;;	[ ;iOo;;"!default;@;" tabs-bottom-active-gradient;o;	;@;"base-gradient;"base_gradient;iS;	[ ;iSo;
+
+;@;["¬/**
+ * @var {boolean} $include-tab-highlights
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */;;;	[ ;iUo;;"!default;@;"include-tab-highlights;o;	;@;"include-highlights;"include_highlights;iZ;	[ ;iZo;
+
+;@;["/* Private */;;;	[ ;i\o;;0;@;"tabs-top-height;o:Sass::Script::Operation
+;@:@operator:
+minus:@operand2o;;[ ;@; ["em;!"
+0.8em;f0.80000000000000004 ôö;i^:@operand1o;	;@;"global-row-height;"global_row_height;i^;i^;	[ ;i^o;;0;@;"tabs-top-icon-size;o;"
+;@;#;$;%o;;[ ;@; ["em;!"
+0.6em;f0.59999999999999998 33;i`;&o;	;@;"tabs-top-height;"tabs_top_height;i`;i`;	[ ;i`o;
+
+;@;["F/**
+ * Includes default tab styles.
+ *
+ * @member Ext.tab.Bar
+ */;;;	[ ;ibo:Sass::Tree::MixinDefNode;@;"sencha-tabs;0;T;	[u:Sass::Tree::IfNode‘[o:Sass::Script::Variable	:@options{ :
+@name"include-top-tabs:@underscored_name"include_top_tabs:
+@lineih0[o:Sass::Tree::MixinNode:@keywords{ ;@;"sencha-top-tabs:@splat0:@children[ :
+@args[ ;	iiu;(›[o:Sass::Script::Variable	:@options{ :
+@name"include-bottom-tabs:@underscored_name"include_bottom_tabs:
+@lineik0[o:Sass::Tree::MixinNode:@keywords{ ;@;"sencha-bottom-tabs:@splat0:@children[ :
+@args[ ;	ilu;(˝[o:Sass::Script::Variable	:@options{ :
+@name"include-tabbar-uis:@underscored_name"include_tabbar_uis:
+@lineio0[o:Sass::Tree::MixinNode:@keywords{ ;@;"sencha-tabbar-ui:@splat0:@children[ :
+@args[	o:Sass::Script::String	;@:@value"
+light:
+@type:string;	ipo; 	;@;"tabs-light;"tabs_light;	ipo; 	;@;"tabs-bar-gradient;"tabs_bar_gradient;	ipo; 	;@;"tabs-light-active;"tabs_light_active;	ip;	ipo;
+;{ ;@;"sencha-tabbar-ui;0;[ ;[	o;	;@;"	dark;;;	iqo; 	;@;"tabs-dark;"tabs_dark;	iqo; 	;@;"tabs-bar-gradient;"tabs_bar_gradient;	iqo; 	;@;"tabs-dark-active-color;"tabs_dark_active_color;	iq;	iqo;
+;{ ;@;"sencha-tabbar-ui;0;[ ;[	o;	;@;"neutral;;;	iro; 	;@;"neutral-color;"neutral_color;	iro; 	;@;"tabs-bar-gradient;"tabs_bar_gradient;	iro:Sass::Script::Funcall;{ ;@;"darken;0;[o; 	;@;"neutral-color;"neutral_color;	iro:Sass::Script::Number:@denominator_units[ ;@:@numerator_units[ :@original"40;i-;	ir;	ir;	iro;
+
+;@;["/* Rules for all tabs */;;;	[ ;iuo:Sass::Tree::RuleNode:
+@tabsi ;@:
+@rule["V.x-tab.x-item-disabled span.x-button-label, .x-tab.x-item-disabled .x-button-icon:@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;.[o:#Sass::Selector::SimpleSequence
+;.[o:Sass::Selector::Class;["
+x-tab:@filename" ;ivo;1;["x-item-disabled;2@;iv;2@:@sourceso:Set:
+@hash{ :@subject0;ivo;0
+;.[o:Sass::Selector::Element	;["	span;2@;iv:@namespace0o;1;["x-button-label;2@;iv;2@;3o;4;5{ ;60;ivo;/;.[o;0
+;.[o;1;["
+x-tab;2@;ivo;1;["x-item-disabled;2@;iv;2@;3o;4;5{ ;60;ivo;0
+;.[o;1;["x-button-icon;2@;iv;2@;3o;4;5{ ;60;iv;2@;iv;T;	[o:Sass::Tree::MixinNode;{ ;@;"opacity;0;	[ ;[o;;[ ;@; [ ;!"0.5;f0.5;iw;iw;ivo;);*i ;@;+[".x-tab.x-draggable;,o;-;.[o;/;.[o;0
+;.[o;1;["
+x-tab;2" ;iyo;1;["x-draggable;2@A;iy;2@A;3o;4;5{ ;60;iy;2@A;iy;T;	[o;9;{ ;@;"opacity;0;	[ ;[o;;@1;@; [ ;!"0.7;f0.69999999999999996 ff;iz;iz;iyo;);*i ;@;+[".x-tab;,o;-;.[o;/;.[o;0
+;.[o;1;["
+x-tab;2" ;i};2@];3o;4;5{ ;60;i};2@];i};T;	[	o:Sass::Tree::PropNode;*i ;@;["z-index:@prop_syntax:new;o:Sass::Script::String;@;"1;:identifier;	[ ;i~o;:;*i ;@;["-webkit-user-select;;;<;o;=;@;"	none;;>;	[ ;io;:;*i ;@;["overflow;;;<;o:Sass::Script::List	;@;[o;=	;@;"visible;;>;i{o;=	;@;"!important;;>;i{:@separator:
+space;i{;	[ ;i{o;);*i ;@;+[".x-button-label;,o;-;.[o;/;.[o;0
+;.[o;1;["x-button-label;2" ;i};2@É;3o;4;5{ ;60;i};2@É;i};T;	[o;:;*i ;@;["overflow;;;<;o;?	;@;[o;=	;@;"visible;;>;i~o;=	;@;"!important;;>;i~;@;A;i~;	[ ;i~;i};i};[ ;igo;';@;"sencha-top-tabs;0;T;	[o;);*i ;@;+[".x-tabbar.x-docked-top;,o;-;.[o;/;.[o;0
+;.[o;1;["x-tabbar;2" ;iÖo;1;["x-docked-top;2@°;iÖ;2@°;3o;4;5{ ;60;iÖ;2@°;iÖ;T;	[
+o;:;*i ;@;["border-bottom-width;;;<;o;=;@;"	.1em;;>;	[ ;iÜo;:;*i ;@;["border-bottom-style;;;<;o;=;@;"
+solid;;>;	[ ;iáo;:;*i ;@;["height;;;<;o;	;@;"global-row-height;"global_row_height;ià;	[ ;iào;:;*i ;@;["padding;;;<;o;?	;@;[o;;@1;@; [ ;!"0;i ;iâo;;[ ;@; ["em;!"
+0.8em;f0.80000000000000004 ôö;iâ;@;A;iâ;	[ ;iâo;);*i ;@;+[".x-tab;,o;-;.[o;/;.[o;0
+;.[o;1;["
+x-tab;2" ;iã;2@÷;3o;4;5{ ;60;iã;2@÷;iã;T;	[o;:;*i ;@;["position;;;<;o;=;@;"relative;;>;	[ ;iåo;:;*i ;@;["padding;;;<;o;?	;@;[o;"
+;@;#:div;%o;
+;@1;@; [ ;i;iç;&o;"
+;@;#;$;%o;;[ ;@; ["em;!"1em;i;iç;&o;	;@;"tabs-top-height;"tabs_top_height;iç;iç;iço;;[ ;@; ["em;!"
+0.8em;f0.80000000000000004 ôö;iç;@;A;iç;	[ ;iço;:;*i ;@;["height;;;<;o;	;@;"tabs-top-height;"tabs_top_height;ié;	[ ;iéo;:;*i ;@;["min-width;;;<;o;=;@;"
+3.3em;;>;	[ ;ièu;(æ[o:Sass::Script::Variable	:@options{ :
+@name"include-border-radius:@underscored_name"include_border_radius:
+@lineiê0[o:Sass::Tree::MixinNode:@keywords{ ;@;"border-radius:@splat0:@children[ :
+@args[o:Sass::Script::Operation
+;@:@operator:div:@operand2o:Sass::Script::Number:@denominator_units[ ;@:@numerator_units[ :@original"2:@valuei;	iê:@operand1o; 	;@;"tabs-top-height;"tabs_top_height;	iê;	iê;	iêo;);*i ;@;+[".x-button-label;,o;-;.[o;/;.[o;0
+;.[o;1;["x-button-label;2" ;ií;2@;3o;4;5{ ;60;ií;2@;ií;T;	[	o;:;*i ;@;["font-size;;;<;o;=;@;"	.8em;;>;	[ ;iìo;:;*i ;@;["line-height;;;<;o;=;@;"
+1.2em;;>;	[ ;iîo;:;*i ;@;["text-rendering;;;<;o;=;@;"optimizeLegibility;;>;	[ ;iïo;:;*i ;@;["-webkit-font-smoothing;;;<;o;=;@;"antialiased;;>;	[ ;iñ;iío;);*i ;@;+[".x-badge;,o;-;.[o;/;.[o;0
+;.[o;1;["x-badge;2" ;iô;2@:;3o;4;5{ ;60;iô;2@:;iô;T;	[o;:;*i ;@;["font-size;;;<;o;?	;@;[o;;[ ;@; ["em;!"
+0.6em;f0.59999999999999998 33;iöo;=	;@;"!important;;>;iö;@;A;iö;	[ ;iöo;:;*i ;@;["top;;;<;o;=;@;"-0.5em;;>;	[ ;iõ;iôo;);*i ;@;+["&.x-tab-icon;,o;-;.[o;/;.[o;0
+;.[o:Sass::Selector::Parent;2" ;iûo;1;["x-tab-icon;2@\;iû;2@\;3o;4;5{ ;60;iû;2@\;iû;T;	[o;:;*i ;@;["padding;;;<;o;?	;@;[o;"
+;@;#;$;%o;;[ ;@; ["em;!"
+0.1em;f0.10000000000000001 ôö;iü;&o;"
+;@;#;B;%o;
+;@1;@; [ ;i;iü;&o;"
+;@;#;$;%o;;[ ;@; ["em;!"1em;i;iü;&o;	;@;"tabs-top-height;"tabs_top_height;iü;iü;iü;iüo;;[ ;@; ["em;!"
+0.8em;f0.80000000000000004 ôö;iü;@;A;iü;	[ ;iüo;);*i ;@;+[".x-button-icon;,o;-;.[o;/;.[o;0
+;.[o;1;["x-button-icon;2" ;i°;2@é;3o;4;5{ ;60;i°;2@é;i°;T;	[o;:;*i ;@;["-webkit-mask-size;;;<;o;	;@;"tabs-top-icon-size;"tabs_top_icon_size;i¢;	[ ;i¢o;:;*i ;@;["
+width;;;<;o;	;@;"tabs-top-icon-size;"tabs_top_icon_size;i£;	[ ;i£o;:;*i ;@;["height;;;<;o;	;@;"tabs-top-icon-size;"tabs_top_icon_size;i§;	[ ;i§o;:;*i ;@;["display;;;<;o;=;@;"inline-block;;>;	[ ;i•o;:;*i ;@;["margin;;;<;o;?	;@;[o;;@1;@; [ ;!"0;i ;i¶o;=	;@;"	auto;;>;i¶;@;A;i¶;	[ ;i¶o;:;*i ;@;["position;;;<;o;=;@;"relative;;>;	[ ;iß;i°o;);*i ;@;+[".x-button-label;,o;-;.[o;/;.[o;0
+;.[o;1;["x-button-label;2" ;i™;2@ ;3o;4;5{ ;60;i™;2@ ;i™;T;	[o;:;*i ;@;["margin;;;<;o;=;@;"0;;>;	[ ;i´o;:;*i ;@;["margin-left;;;<;o;=;@;"	.3em;;>;	[ ;i¨o;:;*i ;@;["padding;;;<;o;?	;@;[	o;;[ ;@; ["em;!"
+0.1em;f0.10000000000000001 ôö;i≠o;;@1;@; [ ;!"0;i ;i≠o;;[ ;@; ["em;!"
+0.2em;f0.20000000000000001 ôö;i≠o;;@1;@; [ ;!"0;i ;i≠;@;A;i≠;	[ ;i≠o;:;*i ;@;["display;;;<;o;=;@;"inline-block;;>;	[ ;iÆo;:;*i ;@;["position;;;<;o;=;@;"relative;;>;	[ ;iØo;:;*i ;@;["top;;;<;o;=;@;"
+-.4em;;>;	[ ;i∞;i™;iû;iã;iÖ;[ ;iÑo;';@;"sencha-bottom-tabs;0;T;	[o;);*i ;@;+[".x-tabbar.x-docked-bottom;,o;-;.[o;/;.[o;0
+;.[o;1;["x-tabbar;2" ;iπo;1;["x-docked-bottom;2@;iπ;2@;3o;4;5{ ;60;iπ;2@;iπ;T;	[
+o;:;*i ;@;["border-top-width;;;<;o;=;@;"	.1em;;>;	[ ;i∫o;:;*i ;@;["border-top-style;;;<;o;=;@;"
+solid;;>;	[ ;iªo;:;*i ;@;["height;;;<;o;=;@;"3em;;>;	[ ;iºo;:;*i ;@;["padding;;;<;o;=;@;"0;;>;	[ ;iΩo;);*i ;@;+[".x-tab;,o;-;.[o;/;.[o;0
+;.[o;1;["
+x-tab;2" ;iø;2@?;3o;4;5{ ;60;iø;2@?;iø;T;	[u;([o:Sass::Script::Variable	:@options{ :
+@name"include-border-radius:@underscored_name"include_border_radius:
+@linei¿0[o:Sass::Tree::MixinNode:@keywords{ ;@;"border-radius:@splat0:@children[ :
+@args[o; 	;@;"tabs-bottom-radius;"tabs_bottom_radius;	i¿;	i¿o;:;*i ;@;["min-width;;;<;o;=;@;"
+3.3em;;>;	[ ;i¡o;:;*i ;@;["position;;;<;o;=;@;"relative;;>;	[ ;i¬o;:;*i ;@;["padding-top;;;<;o;=;@;"	.2em;;>;	[ ;i√o;9;{ ;@;"box-orient;0;	[ ;[o;=	;@;"vertical;;>;iƒ;iƒo;);*i ;@;+[".x-button-icon;,o;-;.[o;/;.[o;0
+;.[o;1;["x-button-icon;2" ;i∆;2@i;3o;4;5{ ;60;i∆;2@i;i∆;T;	[o;:;*i ;@;["-webkit-mask-size;;;<;o;	;@;"tabs-bottom-icon-size;"tabs_bottom_icon_size;i«;	[ ;i«o;:;*i ;@;["
+width;;;<;o;	;@;"tabs-bottom-icon-size;"tabs_bottom_icon_size;i»;	[ ;i»o;:;*i ;@;["height;;;<;o;	;@;"tabs-bottom-icon-size;"tabs_bottom_icon_size;i…;	[ ;i…o;:;*i ;@;["display;;;<;o;=;@;"
+block;;>;	[ ;i o;:;*i ;@;["margin;;;<;o;?	;@;[o;;@1;@; [ ;!"0;i ;iÀo;=	;@;"	auto;;>;iÀ;@;A;iÀ;	[ ;iÀo;:;*i ;@;["position;;;<;o;=;@;"relative;;>;	[ ;iÃ;i∆o;);*i ;@;+[".x-button-label;,o;-;.[o;/;.[o;0
+;.[o;1;["x-button-label;2" ;iœ;2@•;3o;4;5{ ;60;iœ;2@•;iœ;T;	[o;:;*i ;@;["margin;;;<;o;=;@;"0;;>;	[ ;i–o;:;*i ;@;["padding;;;<;o;?	;@;[	o;;[ ;@; ["em;!"
+0.1em;f0.10000000000000001 ôö;i—o;;@1;@; [ ;!"0;i ;i—o;;[ ;@; ["em;!"
+0.2em;f0.20000000000000001 ôö;i—o;;@1;@; [ ;!"0;i ;i—;@;A;i—;	[ ;i—o;:;*i ;@;["font-size;;;<;o;=;@;"9px;;>;	[ ;i“o;:;*i ;@;["line-height;;;<;o;=;@;"	12px;;>;	[ ;i”o;:;*i ;@;["text-rendering;;;<;o;=;@;"optimizeLegibility;;>;	[ ;i‘o;:;*i ;@;["-webkit-font-smoothing;;;<;o;=;@;"antialiased;;>;	[ ;i’;iœ;iø;iπu;($[o:Sass::Script::Variable	:@options{ :
+@name"include-default-icons:@underscored_name"include_default_icons:
+@linei⁄0[o:Sass::Tree::MixinNode:@keywords{ ;@;"pictos-iconmask:@splat0:@children[ :
+@args[o:Sass::Script::String	;@:@value"bookmarks:
+@type:string;	i€;	i€o;
+;{ ;@;"pictos-iconmask;0;[ ;[o;	;@;"download;;;	i‹;	i‹o;
+;{ ;@;"pictos-iconmask;0;[ ;[o;	;@;"favorites;;;	i›;	i›o;
+;{ ;@;"pictos-iconmask;0;[ ;[o;	;@;"	info;;;	iﬁ;	iﬁo;
+;{ ;@;"pictos-iconmask;0;[ ;[o;	;@;"	more;;;	iﬂ;	iﬂo;
+;{ ;@;"pictos-iconmask;0;[ ;[o;	;@;"	time;;;	i‡;	i‡o;
+;{ ;@;"pictos-iconmask;0;[ ;[o;	;@;"	user;;;	i·;	i·o;
+;{ ;@;"pictos-iconmask;0;[ ;[o;	;@;"	team;;;	i‚;	i‚;[ ;i∏o;
+
+;@;["Õ/**
+ * Creates a theme UI for tabbar/tab components.
+ *
+ *     // SCSS
+ *     @include sencha-button-ui('pink', #333, 'matte', #AE537A);
+ *
+ *     // JS
+ *     var tabs = new Ext.tab.Panel({
+ *        tabBar: {
+ *          ui: 'pink',
+ *          dock: 'bottom',
+ *          layout: { pack: 'center' }
+ *        },
+ *        ...
+ *     });
+ *
+ * @param {string} $ui-label The name of the UI being created.
+ *   Can not included spaces or special punctuation (used in class names)
+ * @param {color} $bar-color Base color for the tab bar.
+ * @param {string} $bar-gradient Background gradient style for the tab bar.
+ * @param {color} $tab-active-color Background-color for active tab icons.
+ *
+ * @member Ext.tab.Bar
+ */;;;	[ ;iÊo;';@;"sencha-tabbar-ui;0;T;	[o;);*i ;@;+[".x-tabbar-o;	;@;"ui-label;"ui_label;iˇ;T;	[o;9;{ ;@;"background-gradient;0;	[ ;[o;	;@;"bar-color;"bar_color;i o;	;@;"bar-gradient;"bar_gradient;i ;i o;:;*i ;@;["border-top-color;;;<;o;;{ ;@;"darken;0;[o;	;@;"bar-color;"bar_color;io;;[ ;@; ["%;!"5%;i
+;i;i;	[ ;io;:;*i ;@;["border-bottom-color;;;<;o;;{ ;@;"darken;0;[o;	;@;"bar-color;"bar_color;io;;[ ;@; ["%;!"15%;i;i;i;	[ ;io;);*i ;@;+[".x-tab;,o;-;.[o;/;.[o;0
+;.[o;1;["
+x-tab;2" ;i;2@&;3o;4;5{ ;60;i;2@&;i;T;	[o;9;{ ;@;"color-by-background;0;	[ ;[o;	;@;"bar-color;"bar_color;io;;[ ;@; ["%;!"40%;i-;i;io;:;*i ;@;["border-bottom;;;<;o;?	;@;[o;;[ ;@; ["px;!"1px;i;io;=	;@;"
+solid;;>;io;=	;@;"transparent;;>;i;@;A;i;	[ ;i;io;);*i ;@;+[".x-tab-active;,o;-;.[o;/;.[o;0
+;.[o;1;["x-tab-active;2" ;i	;2@R;3o;4;5{ ;60;i	;2@R;i	;T;	[o;9;{ ;@;"color-by-background;0;	[ ;[o;	;@;"bar-color;"bar_color;i
+o;;[ ;@; ["%;!"90%;i_;i
+;i
+o;:;*i ;@;["border-bottom-color;;;<;o;;{ ;@;"lighten;0;[o;	;@;"bar-color;"bar_color;io;;[ ;@; ["%;!"3%;i;i;i;	[ ;i;i	o;);*i ;@;+[".x-tab-pressed;,o;-;.[o;/;.[o;0
+;.[o;1;["x-tab-pressed;2" ;i;2@;3o;4;5{ ;60;i;2@;i;T;	[o;9;{ ;@;"color-by-background;0;	[ ;[o;	;@;"bar-color;"bar_color;io;;[ ;@; ["%;!"	100%;ii;i;i;i;iˇu;(5
+[o:Sass::Script::Variable	:@options{ :
+@name"include-bottom-tabs:@underscored_name"include_bottom_tabs:
+@linei0[o:Sass::Tree::RuleNode:
+@tabsi ;@:
+@rule[".x-tabbar-o; 	;@;"ui-label;"ui_label;	i".x-docked-bottom:@has_childrenT:@children[o;
+;i ;@;[".x-tab:@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
+;[o:Sass::Selector::Class;["
+x-tab:@filename" ;	i;@:@sourceso:Set:
+@hash{ :@subject0;	i;@;	i;T;[o:Sass::Tree::MixinNode:@keywords{ ;@;"bevel-by-background:@splat0;[ :
+@args[o; 	;@;"bar-color;"bar_color;	i;	io;
+;i ;@;[".x-button-icon;o;;[o;;[o;
+;[o;;["x-button-icon;" ;	i;@7;o;;{ ;0;	i;@7;	i;T;[o;;{ ;@;"mask-by-background;0;[ ;[o; 	;@;"bar-color;"bar_color;	io:Sass::Script::Number:@denominator_units[ ;@:@numerator_units["%:@original"20%:@valuei;	io; 	;@;"tabs-bar-gradient;"tabs_bar_gradient;	i;	i;	i;	io;
+;i ;@;[".x-tab-active;o;;[o;;[o;
+;[o;;["x-tab-active;" ;	i;@W;o;;{ ;0;	i;@W;	i;T;[	o;;{ ;@;"background-gradient;0;[ ;[o:Sass::Script::Funcall;{ ;@;"darken;0;[o; 	;@;"bar-color;"bar_color;	io;;[ ;@; ["%;!"5%;"i
+;	i;	io:Sass::Script::String	;@;""recessed:
+@type:identifier;	i;	io;;{ ;@;"bevel-by-background;0;[ ;[o;#;{ ;@;"lighten;0;[o; 	;@;"bar-color;"bar_color;	io;;[ ;@; ["%;!"10%;"i;	i;	i;	iu:Sass::Tree::IfNodeá[o:Sass::Script::Variable	:@options{ :
+@name"include-tab-highlights:@underscored_name"include_tab_highlights:
+@linei 0[o:Sass::Tree::MixinNode:@keywords{ ;@;"box-shadow:@splat0:@children[ :
+@args[o:Sass::Script::List	;@:@value[
+o:Sass::Script::Funcall;{ ;@;"darken;0;[o; 	;@;"bar-color;"bar_color;	i!o:Sass::Script::Number:@denominator_units[ ;@:@numerator_units["%:@original"10%;i;	i!;	i!o;;[ ;@;[ ;"0;i ;	i!o;;@;@;[ ;"0;i ;	i!o;;[ ;@;["em;"0.25em;f	0.25;	i!o:Sass::Script::String	;@;"
+inset:
+@type:identifier;	i!:@separator:
+space;	i!;	i!o;
+;i ;@;[".x-button-icon;o;;[o;;[o;
+;[o;;["x-button-icon;" ;	i$;@á;o;;{ ;0;	i$;@á;	i$;T;[o;;{ ;@;"background-gradient;0;[ ;[o; 	;@;"tab-active-color;"tab_active_color;	i%o; 	;@;" tabs-bottom-active-gradient;" tabs_bottom_active_gradient;	i%;	i%;	i$;	i;	iu;(Í[o:Sass::Script::Variable	:@options{ :
+@name"include-top-tabs:@underscored_name"include_top_tabs:
+@linei+0[o:Sass::Tree::RuleNode:
+@tabsi ;@:
+@rule[".x-tabbar-o; 	;@;"ui-label;"ui_label;	i,".x-docked-top:@has_childrenT:@children[o;
+;i ;@;[".x-tab-active:@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
+;[o:Sass::Selector::Class;["x-tab-active:@filename" ;	i-;@:@sourceso:Set:
+@hash{ :@subject0;	i-;@;	i-;T;[o:Sass::Tree::MixinNode:@keywords{ ;@;"background-gradient:@splat0;[ :
+@args[o:Sass::Script::Funcall;{ ;@;"darken;0;[o; 	;@;"bar-color;"bar_color;	i.o:Sass::Script::Number:@denominator_units[ ;@:@numerator_units["%:@original"5%:@valuei
+;	i.;	i.o:Sass::Script::String	;@;#"recessed:
+@type:string;	i.;	i.o;;{ ;@;"color-by-background;0;[ ;[o;;{ ;@;"darken;0;[o; 	;@;"bar-color;"bar_color;	i/o;; [ ;@;!["%;""5%;#i
+;	i/;	i/;	i/;	i-o;
+;i ;@;[".x-tab;o;;[o;;[o;
+;[o;;["
+x-tab;" ;	i1;@S;o;;{ ;0;	i1;@S;	i1;T;[o;
+;i ;@;[".x-button-icon;o;;[o;;[o;
+;[o;;["x-button-icon;" ;	i2;@c;o;;{ ;0;	i2;@c;	i2;T;[o;;{ ;@;"mask-by-background;0;[ ;[o; 	;@;"bar-color;"bar_color;	i3o;; [ ;@;!["%;""20%;#i;	i3o; 	;@;"tabs-bar-gradient;"tabs_bar_gradient;	i3;	i3;	i2;	i1;	i,;[	[o;;@;"ui-label;"ui_label0[o;;@;"bar-color;"bar_color0[o;;@;"bar-gradient;"bar_gradient0[o;;@;"tab-active-color;"tab_active_color0;i˛;i

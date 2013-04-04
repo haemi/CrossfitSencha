@@ -1,0 +1,14 @@
+2013-03-26 8:09:37 - INFO --> benutzerId: 114 - datum: 2013-03-26 - beginn: 18:00:00 - error: 
+2013-03-26 8:09:39 - INFO --> benutzerId: 114 - datum: 2013-03-26 - beginn: 19:00:00 - error: 
+2013-03-26 8:09:42 - INFO --> benutzerId: 114 - datum: 2013-03-26 - beginn: 20:00:00 - error: 
+2013-03-26 8:09:44 - INFO --> benutzerId: 114 - datum: 2013-03-27 - beginn: 09:00:00 - error: 
+2013-03-26 9:50:02 - INFO --> benutzerId: 114 - datum: 2013-03-26 - beginn: 20:00:00 - error: 
+2013-03-26 12:25:35 - INFO --> benutzerId: 114 - datum: 2013-04-02 - beginn: 19:00:00 - error: 
+2013-03-26 12:25:39 - INFO --> benutzerId: 114 - datum: 2013-04-03 - beginn: 09:00:00 - error: 
+2013-03-26 12:35:03 - INFO --> benutzerId: 114 - datum: 2013-04-01 - beginn: 09:00:00 - error: 
+2013-03-26 12:35:07 - INFO --> benutzerId: 114 - datum: 2013-04-02 - beginn: 20:00:00 - error: 
+2013-03-26 12:45:48 - INFO --> benutzerId: 114 - datum: 2013-03-29 - beginn: 18:00:00 - error: 
+2013-03-26 20:50:31 - INFO --> benutzerId: 114 - datum: 2013-03-27 - beginn: 09:00:00 - error: 
+2013-03-26 20:53:04 - INFO --> benutzerId: 114 - datum: 2013-03-26 - beginn: 19:00:00 - error: 
+2013-03-26 20:56:23 - INFO --> benutzerId: 114 - datum: 2013-03-26 - beginn: 19:00:00 - error: 
+2013-03-26 20:57:41 - INFO --> benutzerId: 114 - datum: 2013-03-27 - beginn: 09:00:00 - error: 

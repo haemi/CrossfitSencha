@@ -1,0 +1,3 @@
+2013-03-24 7:47:28 - INFO --> 9
+2013-03-24 7:47:33 - INFO --> 11
+2013-03-24 7:48:52 - INFO --> valid: 1 - benutzerId:  - uebungsId: 24 - kg:  - wh: 10 - min:  - sek:  - cm:  - datum: 2013-03-22

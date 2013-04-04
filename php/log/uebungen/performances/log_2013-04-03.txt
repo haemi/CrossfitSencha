@@ -1,0 +1,10 @@
+2013-04-03 5:42:16 - INFO --> benutzerId: 114 - uebungsId: 43
+2013-04-03 5:42:26 - INFO --> benutzerId: 114 - uebungsId: 43
+2013-04-03 8:09:41 - INFO --> benutzerId: 114 - uebungsId: 6
+2013-04-03 8:11:43 - INFO --> benutzerId: 114 - uebungsId: 5
+2013-04-03 8:12:42 - INFO --> benutzerId: 114 - uebungsId: 6
+2013-04-03 8:14:33 - INFO --> benutzerId: 114 - uebungsId: 5
+2013-04-03 8:15:11 - INFO --> benutzerId: 114 - uebungsId: 5
+2013-04-03 8:15:42 - INFO --> benutzerId: 114 - uebungsId: 10
+2013-04-03 8:23:53 - INFO --> benutzerId: 114 - uebungsId: 2
+2013-04-03 8:24:19 - INFO --> benutzerId: 114 - uebungsId: 2

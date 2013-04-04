@@ -1,0 +1,18 @@
+2013-03-21 7:19:10 - INFO --> benutzerId: 114 - datum: 2013-03-22 - beginn: 19:00:00 - error: 
+2013-03-21 7:56:55 - INFO --> Array: benutzerId: 114 - datum: 2013-03-22 - beginn: 19:00:00 - error: 
+2013-03-21 8:02:33 - INFO --> [wochenuebersicht] benutzerId: 114 - startDatum: 2013-03-21 - endDatum: 2013-04-21
+2013-03-21 8:02:35 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:02:37 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:04:26 - INFO --> [wochenuebersicht] benutzerId: 114 - startDatum: 2013-03-21 - endDatum: 2013-04-21
+2013-03-21 8:04:31 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:04:33 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:05:32 - INFO --> [wochenuebersicht] benutzerId: 114 - startDatum: 2013-03-21 - endDatum: 2013-04-21
+2013-03-21 8:05:35 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:05:36 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:07:16 - INFO --> [wochenuebersicht] benutzerId: 114 - startDatum: 2013-03-21 - endDatum: 2013-04-21
+2013-03-21 8:07:18 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:07:20 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:08:00 - INFO --> [wochenuebersicht] benutzerId: 114 - startDatum: 2013-03-21 - endDatum: 2013-04-21
+2013-03-21 8:08:01 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:08:03 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 
+2013-03-21 8:08:04 - INFO --> [anmeldungenfuerk] benutzerId: 114 - datum: 2013-03-23 - beginn: 09:00:00 - error: 

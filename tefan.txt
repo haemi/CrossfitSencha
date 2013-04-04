@@ -1,0 +1,337 @@
+[INF]		
+[INF]		native:
+[INF]		
+[INF]		-before-init-local:
+[INF]		
+[INF]		-init-local:
+[INF]		
+[INF]		-after-init-local:
+[INF]		
+[INF]		init-local:
+[INF]		
+[INF]		find-cmd:
+[INF]		
+[INF]		-before-init:
+[INF]		
+[INF]		-init:
+[INF]		
+[INF]		-after-init:
+[INF]		
+[INF]		init:
+[INF]		
+[INF]		-before-build:
+[INF]		
+[INF]		sass:
+[INF]		
+[INF]		-before-sass:
+[INF]		
+[INF]		-sass:
+[INF]		[shellscript] identical ../css/app.css 
+[INF]		
+[INF]		-after-sass:
+[INF]		
+[INF]		page:
+[INF]		
+[INF]		-before-page:
+[INF]		
+[INF]			-page:
+[INF]		building application
+[INF]		Deploying your application to /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/package
+[INF]		Copied /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/./touch/my-javascript/sha256.js to /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/package/touch/my-javascript/sha256.js
+[INF]		Copied /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/./app.js to /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/package/app.js
+[INF]		Copied /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/./resources/css/app.css to /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/package/resources/css/app.css
+[WRN]		File or folder /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/./resources/images not found
+[INF]		Copied /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/./resources/icons
+[INF]		Copied /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/./resources/startup
+[INF]		Resolving your application dependencies (http://localhost/crossfit/crossfit/index.html)
+[INF]		Compiling app.js and dependencies
+[INF]		Processing classPath entry : /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/sencha-compile-temp-dir
+[INF]		Processing classPath entry : /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/touch/src
+[INF]		Processing classPath entry : /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/app.js
+[INF]		Processing classPath entry : /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/app
+[INF]		Processing class inheritance graph
+[INF]		Processing instantiation refereces to classes and aliases
+[INF]		Processing source dependencies
+[INF]		Concatenating output to file /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/package/app.js
+[INF]		Completed compilation.
+[INF]		Processed remote file touch/sencha-touch.js
+[INF]		Processed local file touch/my-javascript/sha256.js
+[INF]		Minified touch/my-javascript/sha256.js
+[INF]		Processed local file app.js
+[INF]		Minified app.js
+[INF]		Minified resources/css/app.css
+[INF]		Generated app.json
+[INF]		Embedded microloader into index.html
+[INF]		Generating native package
+[INF]		Packaging your application as a native app to /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native ...
+[ERR]		failed running native packager
+[ERR]		Created project directory: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native
+Created directory /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/src/com/mycompany/myAppID
+Added file /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/src/com/mycompany/myAppID/STActivity.java
+Created directory /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res
+Created directory /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin
+Created directory /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/libs
+Created directory /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res/values
+Added file /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res/values/strings.xml
+Created directory /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res/layout
+Added file /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res/layout/main.xml
+Added file /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/AndroidManifest.xml
+Added file /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/build.xml
+Added file /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/proguard-project.txt
+Buildfile: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/build.xml
+
+-set-mode-check:
+
+-set-release-mode:
+
+-release-obfuscation-check:
+     [echo] proguard.config is ${proguard.config}
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 21.0.1
+ [checkenv] Installed at /Users/stefan/libs/adt-bundle-mac-x86_64/sdk
+
+-setup:
+     [echo] Project Name: Crossfit
+  [gettype] Project Type: Application
+
+-build-setup:
+     [echo] Resolving Build Target for Crossfit...
+[gettarget] Project Target:   Android 2.2
+[gettarget] API level:        8
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res
+    [mkdir] Created dir: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/gen
+    [mkdir] Created dir: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/classes
+    [mkdir] Created dir: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/dexedLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for Crossfit...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+[dependency] API<=15: Adding annotations.jar to the classpath.
+     [echo] ----------
+     [echo] Building Libraries with 'release'...
+   [subant] No sub-builds to iterate on
+
+-pre-build:
+
+-code-gen:
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+[renderscript] No RenderScript files to compile.
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Generating resource IDs...
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] Generating BuildConfig class.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 3 source files to /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/classes
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+      [dex] input: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/classes
+      [dex] input: /Users/stefan/libs/adt-bundle-mac-x86_64/sdk/tools/support/annotations.jar
+      [dex] input: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/libs/nimblekit.jar
+      [dex] Pre-Dexing /Users/stefan/libs/adt-bundle-mac-x86_64/sdk/tools/support/annotations.jar -> annotations-b1ad93cc24e46f24e64299516df45383.jar
+      [dex] Pre-Dexing /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/libs/nimblekit.jar -> nimblekit-9ff26b8669d5efd96e167d25a1a34308.jar
+      [dex] Converting compiled files and external libraries into /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/classes.dex...
+       [dx] Merged dex A (7 defs/2,4KiB) with dex B (2 defs/1,1KiB). Result is 9 defs/3,5KiB. Took 0,0s
+       [dx] Merged dex A (9 defs/3,5KiB) with dex B (33 defs/47,0KiB). Result is 42 defs/59,7KiB. Took 0,0s
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res
+   [crunch] To destination dir: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res
+   [crunch] Processing image to cache: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res/drawable-hdpi/icon.png => /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res/drawable-hdpi/icon.png
+   [crunch]   (processed image to cache entry /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res/drawable-hdpi/icon.png: 72% size of source)
+   [crunch] Processing image to cache: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res/drawable-ldpi/icon.png => /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res/drawable-ldpi/icon.png
+   [crunch]   (processed image to cache entry /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res/drawable-ldpi/icon.png: 56% size of source)
+   [crunch] Processing image to cache: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/res/drawable-mdpi/icon.png => /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res/drawable-mdpi/icon.png
+   [crunch]   (processed image to cache entry /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/res/drawable-mdpi/icon.png: 42% size of source)
+   [crunch] Crunched 3 PNG files to update cache
+
+-package-resources:
+     [aapt] Creating full resource package...
+
+-package:
+[apkbuilder] Current build type is different than previous build: forced apkbuilder run.
+[apkbuilder] Creating Crossfit-release-unsigned.apk for release...
+
+-post-package:
+
+-release-prompt-for-password:
+
+-release-nosign:
+     [echo] No key.store and key.alias properties found in build.properties.
+     [echo] Please sign /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/Crossfit-release-unsigned.apk manually
+     [echo] and run zipalign from the Android SDK tools.
+[propertyfile] Creating new property file: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/build.prop
+[propertyfile] Updating property file: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/build.prop
+[propertyfile] Updating property file: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/build.prop
+[propertyfile] Updating property file: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/bin/build.prop
+
+-release-sign:
+
+-post-build:
+
+release:
+
+BUILD SUCCESSFUL
+Total time: 7 seconds
+jarsigner: Certificate chain not found for: Stefan.  Stefan must reference a valid KeyStore key entry containing a private key and corresponding public key certificate chain.
+"/Users/stefan/libs/adt-bundle-mac-x86_64/sdk/tools/android" create project --target android-8 --name Crossfit --activity STActivity --path "/Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/build/LCFSencha/native/" --package com.mycompany.myAppID
+Could not sign application with error: 256
+Failed to package application
+
+[ERR]		
+[ERR]		BUILD FAILED
+[ERR]		com.sencha.exceptions.BasicException: The following error occurred while executing this line:
+[ERR]		/Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/.sencha/app/build-impl.xml:137: com.sencha.exceptions.ExScript: Wrapped com.sencha.exceptions.ExBuild: failed running native packager (x-app-build#489)
+[ERR]		   [anonymous] (x-app-build:489)
+[ERR]		   each (/Users/stefan/bin/Sencha/Cmd/3.0.2.288/ant/ant-util.js:462)
+[ERR]		   runAppBuild (x-app-build:286)
+[ERR]		   [anonymous] (x-app-build:545)
+[ERR]		   x_app_build (x-app-build:543)
+[ERR]		   <script> (anonymous:1)
+[ERR]			at com.sencha.exceptions.BasicException.wrap(BasicException.java:43)
+[ERR]			at com.sencha.cli.Command.dispatch(Command.java:104)
+[ERR]			at com.sencha.cli.Commands.dispatch(Commands.java:49)
+[ERR]			at com.sencha.cli.AbstractCommand.dispatch(AbstractCommand.java:182)
+[ERR]			at com.sencha.ant.SenchaCommandTask.doExecute(SenchaCommandTask.java:69)
+[ERR]			at com.sencha.ant.BaseAntTask.execute(BaseAntTask.java:22)
+[ERR]			at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+[ERR]			at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERR]			at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[ERR]			at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[ERR]			at java.lang.reflect.Method.invoke(Method.java:597)
+[ERR]			at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+[ERR]			at org.apache.tools.ant.Task.perform(Task.java:348)
+[ERR]			at org.apache.tools.ant.Target.execute(Target.java:392)
+[ERR]			at org.apache.tools.ant.Target.performTasks(Target.java:413)
+[ERR]			at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+[ERR]			at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+[ERR]			at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+[ERR]			at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+[ERR]			at com.sencha.ant.AntRunner.run(AntRunner.java:156)
+[ERR]			at com.sencha.ant.AntRunner.run(AntRunner.java:72)
+[ERR]			at com.sencha.command.BasePluginCommands$BasePluginCommand.run(BasePluginCommands.java:94)
+[ERR]			at com.sencha.command.BasePluginCommands$BasePluginCommand.run(BasePluginCommands.java:98)
+[ERR]			at com.sencha.command.BasePluginCommands$BaseNamePathCommand.run(BasePluginCommands.java:142)
+[ERR]			at com.sencha.command.app.AppCommands$BuildCommand.execute(AppCommands.java:116)
+[ERR]			at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERR]			at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[ERR]			at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[ERR]			at java.lang.reflect.Method.invoke(Method.java:597)
+[ERR]			at com.sencha.cli.Command.dispatch(Command.java:78)
+[ERR]			at com.sencha.cli.Commands.dispatch(Commands.java:49)
+[ERR]			at com.sencha.cli.Commands.dispatch(Commands.java:49)
+[ERR]			at com.sencha.command.Sencha.main(Sencha.java:71)
+[ERR]		Caused by: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/.sencha/app/build-impl.xml:144: The following error occurred while executing this line:
+[ERR]		/Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/.sencha/app/build-impl.xml:137: com.sencha.exceptions.ExScript: Wrapped com.sencha.exceptions.ExBuild: failed running native packager (x-app-build#489)
+[ERR]		   [anonymous] (x-app-build:489)
+[ERR]		   each (/Users/stefan/bin/Sencha/Cmd/3.0.2.288/ant/ant-util.js:462)
+[ERR]		   runAppBuild (x-app-build:286)
+[ERR]		   [anonymous] (x-app-build:545)
+[ERR]		   x_app_build (x-app-build:543)
+[ERR]		   <script> (anonymous:1)
+[ERR]			at org.apache.tools.ant.ProjectHelper.addLocationToBuildException(ProjectHelper.java:551)
+[ERR]			at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:444)
+[ERR]			at org.apache.tools.ant.taskdefs.CallTarget.execute(CallTarget.java:105)
+[ERR]			at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+[ERR]			at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+[ERR]			at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[ERR]			at java.lang.reflect.Method.invoke(Method.java:597)
+[ERR]			at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+[ERR]			at org.apache.tools.ant.Task.perform(Task.java:348)
+[ERR]			at org.apache.tools.ant.Target.execute(Target.java:392)
+[ERR]			at org.apache.tools.ant.Target.performTasks(Target.java:413)
+[ERR]			at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+[ERR]			at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+[ERR]			at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+[ERR]			at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+[ERR]			at com.sencha.ant.AntRunner.run(AntRunner.java:156)
+[ERR]			at com.sencha.ant.AntRunner.run(AntRunner.java:80)
+[ERR]			at com.sencha.command.ant.AntCommand.execute(AntCommand.java:75)
+[ERR]			at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERR]			at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+[ERR]			at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[ERR]			at java.lang.reflect.Method.invoke(Method.java:597)
+[ERR]			at com.sencha.cli.Command.dispatch(Command.java:78)
+[ERR]			... 31 more
+[ERR]		Caused by: /Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/.sencha/app/build-impl.xml:137: com.sencha.exceptions.ExScript: Wrapped com.sencha.exceptions.ExBuild: failed running native packager (x-app-build#489)
+[ERR]		   [anonymous] (x-app-build:489)
+[ERR]		   each (/Users/stefan/bin/Sencha/Cmd/3.0.2.288/ant/ant-util.js:462)
+[ERR]		   runAppBuild (x-app-build:286)
+[ERR]		   [anonymous] (x-app-build:545)
+[ERR]		   x_app_build (x-app-build:543)
+[ERR]		   <script> (anonymous:1)
+[ERR]			at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:116)
+[ERR]			at org.apache.tools.ant.Task.perform(Task.java:348)
+[ERR]			at org.apache.tools.ant.Target.execute(Target.java:392)
+[ERR]			at org.apache.tools.ant.Target.performTasks(Target.java:413)
+[ERR]			at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+[ERR]			at org.apache.tools.ant.helper.SingleCheckExecutor.executeTargets(SingleCheckExecutor.java:38)
+[ERR]			at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+[ERR]			at org.apache.tools.ant.taskdefs.Ant.execute(Ant.java:442)
+[ERR]			... 52 more
+[ERR]		Caused by: com.sencha.exceptions.ExScript: Wrapped com.sencha.exceptions.ExBuild: failed running native packager (x-app-build#489)
+[ERR]		   [anonymous] (x-app-build:489)
+[ERR]		   each (/Users/stefan/bin/Sencha/Cmd/3.0.2.288/ant/ant-util.js:462)
+[ERR]		   runAppBuild (x-app-build:286)
+[ERR]		   [anonymous] (x-app-build:545)
+[ERR]		   x_app_build (x-app-build:543)
+[ERR]		   <script> (anonymous:1)
+[ERR]			at com.sencha.util.JavaScriptHost.eval(JavaScriptHost.java:74)
+[ERR]			at com.sencha.ant.ScriptTask.executeScript(ScriptTask.java:92)
+[ERR]			at org.apache.tools.ant.taskdefs.optional.script.ScriptDefBase.execute(ScriptDefBase.java:50)
+[ERR]			at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+[ERR]			at sun.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+[ERR]			at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+[ERR]			at java.lang.reflect.Method.invoke(Method.java:597)
+[ERR]			at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+[ERR]			... 59 more
+[ERR]		Caused by: org.mozilla.javascript.WrappedException: Wrapped com.sencha.exceptions.ExBuild: failed running native packager (x-app-build#489)
+[ERR]			at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1786)
+[ERR]			at org.mozilla.javascript.MemberBox.invoke(MemberBox.java:183)
+[ERR]			at org.mozilla.javascript.NativeJavaMethod.call(NativeJavaMethod.java:247)
+[ERR]			at org.mozilla.javascript.Interpreter.interpretLoop(Interpreter.java:1701)
+[ERR]			at org.mozilla.javascript.Interpreter.interpret(Interpreter.java:854)
+[ERR]			at org.mozilla.javascript.InterpretedFunction.call(InterpretedFunction.java:164)
+[ERR]			at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:426)
+[ERR]			at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3178)
+[ERR]			at org.mozilla.javascript.InterpretedFunction.exec(InterpretedFunction.java:175)
+[ERR]			at org.mozilla.javascript.Context.evaluateString(Context.java:1111)
+[ERR]			at com.sencha.util.JavaScriptHost.eval(JavaScriptHost.java:67)
+[ERR]			... 66 more
+[ERR]		Caused by: com.sencha.exceptions.ExBuild: failed running native packager
+[ERR]			at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[ERR]			at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+[ERR]			at sun.reflect.DelegatingConstructorAccessorImpl.newIns
+[ERR]		tance(DelegatingConstructorAccessorImpl.java:27)
+[ERR]			at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+[ERR]			at org.mozilla.javascript.MemberBox.newInstance(MemberBox.java:194)
+[ERR]			at org.mozilla.javascript.NativeJavaClass.constructSpecific(NativeJavaClass.java:284)
+[ERR]			at org.mozilla.javascript.NativeJavaClass.construct(NativeJavaClass.java:202)
+[ERR]			at org.mozilla.javascript.Interpreter.interpretLoop(Interpreter.java:1747)
+[ERR]			... 73 more
+[ERR]		
+[ERR]		Total time: 32 seconds
+[ERR]		com.sencha.exceptions.BasicException: The following error occurred while executing this line:
+/Applications/XAMPP/xamppfiles/htdocs/crossfit/mobile/.sencha/app/build-impl.xml:137: com.sencha.exceptions.ExScript: Wrapped com.sencha.exceptions.ExBuild: failed running native packager (x-app-build#489)
+   [anonymous] (x-app-build:489)
+   each (/Users/stefan/bin/Sencha/Cmd/3.0.2.288/ant/ant-util.js:462)
+   runAppBuild (x-app-build:286)
+   [anonymous] (x-app-build:545)

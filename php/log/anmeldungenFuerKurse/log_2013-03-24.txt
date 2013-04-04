@@ -1,0 +1,6 @@
+2013-03-24 6:47:52 - INFO --> benutzerId: 114 - datum: 2013-03-26 - beginn: 18:00:00 - error: 
+2013-03-24 6:48:19 - INFO --> benutzerId: 114 - datum: 2013-03-25 - beginn: 09:00:00 - error: 
+2013-03-24 6:54:48 - INFO --> benutzerId: 114 - datum: 2013-03-25 - beginn: 11:00:00 - error: 
+2013-03-24 6:54:52 - INFO --> benutzerId: 114 - datum: 2013-03-25 - beginn: 17:00:00 - error: 
+2013-03-24 6:55:45 - INFO --> benutzerId: 114 - datum: 2013-03-25 - beginn: 11:00:00 - error: 
+2013-03-24 6:57:23 - INFO --> benutzerId: 114 - datum: 2013-03-25 - beginn: 18:00:00 - error: 

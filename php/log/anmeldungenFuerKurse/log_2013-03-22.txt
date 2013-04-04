@@ -1,0 +1,2 @@
+2013-03-22 9:07:01 - INFO --> benutzerId: 114 - datum: 2013-03-25 - beginn: 17:00:00 - error: 
+2013-03-22 9:07:03 - INFO --> benutzerId: 114 - datum: 2013-03-25 - beginn: 17:00:00 - error: 

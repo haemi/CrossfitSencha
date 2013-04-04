@@ -1,0 +1,1 @@
+2013-04-03 5:42:26 - INFO --> valid: 1 - benutzerId:  - uebungsId: 43 - kg:  - wh:  - min:  - sek:  - cm: 50000 - datum: 2013-04-03

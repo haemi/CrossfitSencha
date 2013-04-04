@@ -1,0 +1,1 @@
+{"id":"d7ab6234-b657-40ad-9a86-a2c66e0a7b01","js":[{"path":"touch/my-javascript/sha256.js","x-bootstrap":false,"type":"js"},{"path":"app.js","bundle":true,"update":"delta","type":"js"}],"css":[{"path":"resources/css/app.css","update":"delta","type":"css"}]}

@@ -1,0 +1,8 @@
+2013-04-02 8:12:44 - INFO --> benutzerId: 114 - datum: 2013-04-03 - beginn: 09:00:00 - error: 
+2013-04-02 8:12:45 - INFO --> benutzerId: 114 - datum: 2013-04-03 - beginn: 09:00:00 - error: 
+2013-04-02 8:12:49 - INFO --> benutzerId: 114 - datum: 2013-04-03 - beginn: 09:00:00 - error: 
+2013-04-02 12:00:17 - INFO --> benutzerId: 114 - datum: 2013-04-03 - beginn: 17:00:00 - error: 
+2013-04-02 12:00:51 - INFO --> benutzerId: 114 - datum: 2013-04-02 - beginn: 20:00:00 - error: 
+2013-04-02 12:04:00 - INFO --> benutzerId: 114 - datum: 2013-04-02 - beginn: 18:00:00 - error: 
+2013-04-02 12:04:02 - INFO --> benutzerId: 114 - datum: 2013-04-02 - beginn: 18:00:00 - error: 
+2013-04-02 12:51:47 - INFO --> benutzerId: 114 - datum: 2013-04-02 - beginn: 20:00:00 - error: 

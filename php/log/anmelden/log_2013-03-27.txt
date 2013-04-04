@@ -1,0 +1,6 @@
+2013-03-27 19:41:37 - INFO --> benutzerId: 114 - datum: 2013-03-29 - uhrzeit: 18:00:00 - kursId: 282 - single: 0
+2013-03-27 19:45:18 - INFO --> benutzerId: 114 - datum: 2013-03-30 - uhrzeit: 10:00:00 - kursId: 80 - single: 0
+2013-03-27 19:45:28 - INFO --> benutzerId: 114 - datum: 2013-04-01 - uhrzeit: 09:00:00 - kursId: 272 - single: 0
+2013-03-27 19:47:09 - INFO --> benutzerId: 114 - datum: 2013-03-29 - uhrzeit: 18:00:00 - kursId: 282 - single: 0
+2013-03-27 19:47:11 - INFO --> benutzerId: 114 - datum: 2013-03-29 - uhrzeit: 18:00:00 - kursId: 282 - single: 0
+2013-03-27 19:47:27 - INFO --> benutzerId: 114 - datum: 2013-03-29 - uhrzeit: 18:00:00 - kursId: 282 - single: 0

@@ -1,0 +1,4 @@
+2013-03-27 19:45:20 - INFO --> benutzerId: 114 - datum: 2013-03-30 - uhrzeit: 10:00:00 - kursId: 4331
+2013-03-27 19:47:08 - INFO --> benutzerId: 114 - datum: 2013-03-29 - uhrzeit: 18:00:00 - kursId: 4330
+2013-03-27 19:47:10 - INFO --> benutzerId: 114 - datum: 2013-03-29 - uhrzeit: 18:00:00 - kursId: 4333
+2013-03-27 19:47:24 - INFO --> benutzerId: 114 - datum: 2013-03-29 - uhrzeit: 18:00:00 - kursId: 4334

@@ -1,0 +1,8 @@
+2013-03-26 14:22:17 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-26
+2013-03-26 14:25:37 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-26 - id: 16
+2013-03-26 14:31:11 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-26 - id: 16
+2013-03-26 14:32:22 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-26 - id: 16
+2013-03-26 14:32:35 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-26 - id: 16
+2013-03-26 14:33:11 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-26 - id: 16
+2013-03-26 14:33:19 - INFO --> valid: 1 - benutzerId:  - uebungsId: 1 - kg:  - wh:  - min:  - sek:  - cm:  - datum: 2013-03-26 - id: 16
+2013-03-26 21:08:27 - INFO --> valid: 1 - benutzerId:  - uebungsId: 5 - kg: 66 - wh: 24 - min:  - sek:  - cm:  - datum: 2013-02-21 - id: 2
