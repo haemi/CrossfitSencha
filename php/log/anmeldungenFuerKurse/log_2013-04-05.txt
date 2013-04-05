@@ -1,0 +1,1 @@
+2013-04-05 13:48:14 - INFO --> benutzerId: 171 - datum: 2013-04-12 - beginn: 19:00:00 - error: 

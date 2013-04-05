@@ -33,10 +33,8 @@ Ext.define('Crossfit.controller.MyWODsController', {
 	},
 	
 	handleMyWODNavigationPushOrPop: function(nav, value, oldValue, eOpts) {
-		console.log(value);
-		console.log(oldValue);
-
-		if (value == this.getMyWODsViewList()) {
+		if (this.getMyWODsNav().items.indexOf(value) == 0) {
+			console.log('seeing 1');
 			this.getApplication().getController('MyWODsController').loadMyWODs();
 		}
 		

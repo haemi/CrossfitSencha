@@ -1,0 +1,12 @@
+2013-04-05 6:55:17 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 6:58:56 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 6:59:26 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:01:57 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:02:10 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:16:47 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:18:16 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:19:06 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:19:25 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:20:17 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:20:26 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19
+2013-04-05 8:21:14 - INFO --> benutzerId: 114 - startDatum: 2013-04-05 - endDatum: 2013-04-19

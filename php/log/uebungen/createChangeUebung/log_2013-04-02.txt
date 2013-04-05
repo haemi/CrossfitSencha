@@ -1,0 +1,4 @@
+2013-04-02 19:38:12 - INFO --> valid: 1 - benutzerId:  - uebungsId: 43 - kg:  - wh:  - min:  - sek:  - cm: 2020 - datum: 2013-04-02
+2013-04-02 19:38:33 - INFO --> valid: 1 - benutzerId:  - uebungsId: 43 - kg:  - wh:  - min:  - sek:  - cm: 505 - datum: 2013-04-02 - id: 4
+2013-04-02 19:39:43 - INFO --> valid: 1 - benutzerId:  - uebungsId: 43 - kg:  - wh:  - min:  - sek:  - cm: 303 - datum: 2013-04-02 - id: 4
+2013-04-02 19:39:54 - INFO --> valid: 1 - benutzerId:  - uebungsId: 43 - kg:  - wh:  - min:  - sek:  - cm: 9080 - datum: 2013-04-02 - id: 4
